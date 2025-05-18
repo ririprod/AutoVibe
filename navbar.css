@@ -1,0 +1,100 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Стили для header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #c1e8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Логотип */
+header .logo {
+    font-size: 20px;
+    font-weight: 900;
+    color: #000000;
+    text-shadow:
+    0 0 5px #091f3d,
+    0 0 10px #091f3d,
+    0 0 20px #091f3d,
+    0 0 40px #091f3d;
+    transition: 0.3s;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Главное меню */
+header nav ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Пункты меню */
+header nav ul li {
+    position: relative;
+}
+
+/* Ссылки */
+header nav ul li a {
+    padding: 15px;
+    color: #000;
+    font-size: 16px;
+    display: block;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Выпадающее меню */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 140px;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+nav ul li:hover > ul {
+    display: flex;
+}
+
+/* Подменю второго уровня (если есть) */
+nav ul li ul li ul {
+    left: 140px;
+    top: 0;
+    position: absolute;
+}
+
+/* Отступ для основного контента */
+body {
+    padding-top: 15px 8%;
+}
